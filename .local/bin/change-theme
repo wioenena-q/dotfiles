@@ -1,0 +1,37 @@
+#! /usr/bin/env node
+const { readFileSync, writeFileSync } = require("fs");
+const { join } = require("path");
+
+let [, , theme] = process.argv;
+if (!theme) throw new Error("name is required");
+const valid_themes = ["dark", ...["red", "blue", "green", "purple", "pink", "yellow"].map(t => "dark_" + t)]
+const is_theme_starts_with_dark = !!theme.match(/dark_?/);
+if (!is_theme_starts_with_dark && theme !== "dark") theme = "dark_" + theme;
+if (!valid_themes.includes(theme))
+  throw new Error(`theme: ${theme} is not valid theme!\nValid themes: ${valid_themes.join(", ")}`);
+
+const { HOME: HOME_PATH }= process.env;
+const CONFIG_PATH = join(HOME_PATH, ".config");
+const KITTY_PATH = join(CONFIG_PATH, "kitty");
+const WAYBAR_PATH = join(CONFIG_PATH, "waybar");
+const HYPRLAND_PATH = join(CONFIG_PATH, "hypr");
+const KITTY_CONF_PATH = join(KITTY_PATH, "theme_handler.conf");
+const WAYBAR_CSS_PATH = join(WAYBAR_PATH, "theme.css");
+const HYPRLAND_CONF_PATH = join(HYPRLAND_PATH, "configs", "theme.conf");
+
+const kitty_contents = readFileSync(KITTY_CONF_PATH, "utf-8");
+const waybar_contents = readFileSync(WAYBAR_CSS_PATH, "utf-8");
+const hyprland_contents = readFileSync(HYPRLAND_CONF_PATH, "utf-8");
+
+const kitty_regex = /(include)\s(themes.+\.conf)/;
+const waybar_regex = /(@import)\s(url\("themes\/.+\.css"\);)/;
+const hyprland_regex = /(\$theme)\s=\s(.+)/g;
+
+writeFileSync(KITTY_CONF_PATH, kitty_contents.replace(kitty_regex, `include themes/${theme}.conf`))
+console.log(`kitty theme changed on ${KITTY_CONF_PATH}`);
+writeFileSync(WAYBAR_CSS_PATH, waybar_contents.replace(waybar_regex, `@import url("themes/${theme}.css");`));
+console.log(`waybar theme changed on ${WAYBAR_CSS_PATH}`);
+writeFileSync(HYPRLAND_CONF_PATH, hyprland_contents.replace(hyprland_regex, `$theme = ${theme}`));
+console.log(`hyprland theme changed on ${HYPRLAND_CONF_PATH}`);
+
+console.log("Done! please restart waybar and kitty to see changes")
