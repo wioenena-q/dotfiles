@@ -1,0 +1,35 @@
+* {
+    font-family: Hack;
+    font-size: 16px;
+}
+
+#window {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+#inner-box {
+  padding: 10px 20px;
+}
+
+#input {
+  background: @primary;
+  border: none;
+  padding: 10px 20px;
+}
+
+#text {
+  transition: color 0.3s ease-in-out;
+}
+
+#selected {
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+#unselected {
+  transition: all 0.3s ease-in-out;
+}
+
+#entry {
+  color: rgba(50, 50, 50, 1);
+}
