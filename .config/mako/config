@@ -1,0 +1,10 @@
+font=Hack
+background-color=#000000
+border-size=1
+border-color=#ffffff
+border-radius=4
+padding=10
+
+default-timeout=5000
+layer=overlay
+anchor=top-center
