@@ -34,7 +34,7 @@ const hyprland_regex = /(\$theme)\s=\s(.+)/g;
 writeFileSync(KITTY_CONF_PATH, kitty_contents.replace(kitty_regex, `include themes/${theme}.conf`))
 console.log(`kitty theme changed on ${KITTY_CONF_PATH}`);
 writeFileSync(ALACRITTY_YML_PATH, alacritty_contents.replace(alacritty_regex, `/themes/${theme}.yml`));
-console.log(`alacritty theme changed on ${KITTY_CONF_PATH}`);
+console.log(`alacritty theme changed on ${ALACRITTY_YML_PATH}`);
 writeFileSync(WAYBAR_CSS_PATH, waybar_contents.replace(waybar_regex, `@import url("themes/${theme}.css");`));
 console.log(`waybar theme changed on ${WAYBAR_CSS_PATH}`);
 writeFileSync(HYPRLAND_CONF_PATH, hyprland_contents.replace(hyprland_regex, `$theme = ${theme}`));
