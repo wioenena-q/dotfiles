@@ -13,25 +13,30 @@ if (!valid_themes.includes(theme))
 const { HOME: HOME_PATH }= process.env;
 const CONFIG_PATH = join(HOME_PATH, ".config");
 const KITTY_PATH = join(CONFIG_PATH, "kitty");
+const ALACRITTY_PATH = join(CONFIG_PATH, "alacritty");
 const WAYBAR_PATH = join(CONFIG_PATH, "waybar");
 const HYPRLAND_PATH = join(CONFIG_PATH, "hypr");
 const KITTY_CONF_PATH = join(KITTY_PATH, "theme_handler.conf");
+const ALACRITTY_YML_PATH = join(ALACRITTY_PATH, "theme.yml");
 const WAYBAR_CSS_PATH = join(WAYBAR_PATH, "theme.css");
 const HYPRLAND_CONF_PATH = join(HYPRLAND_PATH, "configs", "theme.conf");
 
 const kitty_contents = readFileSync(KITTY_CONF_PATH, "utf-8");
+const alacritty_contents = readFileSync(ALACRITTY_YML_PATH, "utf-8");
 const waybar_contents = readFileSync(WAYBAR_CSS_PATH, "utf-8");
 const hyprland_contents = readFileSync(HYPRLAND_CONF_PATH, "utf-8");
 
 const kitty_regex = /(include)\s(themes.+\.conf)/;
+const alacritty_regex = /(\/themes\/.+\.yml)/g;
 const waybar_regex = /(@import)\s(url\("themes\/.+\.css"\);)/;
 const hyprland_regex = /(\$theme)\s=\s(.+)/g;
 
 writeFileSync(KITTY_CONF_PATH, kitty_contents.replace(kitty_regex, `include themes/${theme}.conf`))
 console.log(`kitty theme changed on ${KITTY_CONF_PATH}`);
+writeFileSync(ALACRITTY_YML_PATH, alacritty_contents.replace(alacritty_regex, `/themes/${theme}.yml`));
 writeFileSync(WAYBAR_CSS_PATH, waybar_contents.replace(waybar_regex, `@import url("themes/${theme}.css");`));
 console.log(`waybar theme changed on ${WAYBAR_CSS_PATH}`);
 writeFileSync(HYPRLAND_CONF_PATH, hyprland_contents.replace(hyprland_regex, `$theme = ${theme}`));
 console.log(`hyprland theme changed on ${HYPRLAND_CONF_PATH}`);
 
-console.log("Done! please restart waybar and kitty to see changes")
+console.log("Done! please restart waybar and terminal to see changes");
