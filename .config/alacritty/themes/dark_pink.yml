@@ -1,0 +1,7 @@
+colors:
+  cursor:
+    text: '#09090B'
+    cursor: '#EC4899'
+  selection:
+    text: '#EC4899'
+    background: '#09090B'

@@ -1,0 +1,26 @@
+import:
+  - /home/wioenena/.config/alacritty/theme.yml
+
+env:
+  TERM: alacritty
+
+window:
+  opacity: .5
+
+font:
+  normal:
+    family: JetBrainsMono
+    style: Regular
+  bold:
+    family: JetBrains Mono
+    style: Regular
+  italic:
+    family: JetBrains Mono
+    style: Italic
+  bold_italic:
+    family: JetBrains Mono
+    style: Bold Italic
+
+cursor:
+  style:
+    blinking: On
