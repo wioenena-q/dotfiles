@@ -1,0 +1,5 @@
+@define-color primary #09090B;
+@define-color secondary #EF4444;
+@define-color text-primary #EF4444;
+@define-color text-secondary #09090B;
+@define-color text-desktop-name @text-primary;

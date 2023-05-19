@@ -1,0 +1,60 @@
+@import url("theme.css");
+
+* {
+  font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  min-height: 0px;
+  font-size: 16px;
+}
+
+.desktop-name,
+#workspaces,
+#window,
+#network,
+#pulseaudio,
+#cpu,
+#memory,
+#clock {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: @secondary;
+}
+
+window {
+  background: @window-background;
+}
+
+.desktop-name {
+  margin-left: 20px;
+  border-right: 1px solid @secondary;
+  padding-right: 10px;
+  color: @text-desktop-name;
+  font-weight: bold;
+}
+
+#workspaces button {
+  margin: 0 10px;
+  background: @primary;
+  padding: 5px 10px;
+  transition: all .3s ease-in-out;
+  border-radius: 4px;
+  color: @text-primary;
+}
+
+#workspaces button.active {
+  background: @secondary;
+  padding: 5px 20px;
+  border-radius: 8px;
+  color: @text-secondary;
+  font-weight: bold;
+}
+
+#pulseaudio,
+#cpu,
+#memory,
+#clock {
+  margin-right: 15px;
+}
