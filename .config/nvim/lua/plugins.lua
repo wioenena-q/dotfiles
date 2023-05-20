@@ -25,6 +25,11 @@ packer.startup(function(use)
     { 'nvim-telescope/telescope.nvim', tag = '0.1.1' },
     'nvim-lua/plenary.nvim',
     'nvim-telescope/telescope-media-files.nvim',
-    'nvim-lua/popup.nvim'
- }
+    'nvim-lua/popup.nvim',
+    { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
+    'neovim/nvim-lspconfig',
+    { "williamboman/mason.nvim", run = ":MasonUpdate" },
+    'williamboman/mason-lspconfig.nvim',
+    { 'neoclide/coc.nvim', branch = 'release' }
+  }
 end)

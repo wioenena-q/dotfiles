@@ -8,7 +8,9 @@ vim.wo.number = true
 vim.opt.title = true
 vim.opt.autoindent = true
 vim.opt.hlsearch = true
+-- For coc.nvim
 vim.opt.backup = false
+vim.opt.writebackup = false
 vim.opt.showcmd = true
 vim.opt.cmdheight = 1
 vim.opt.laststatus = 2
@@ -27,5 +29,6 @@ vim.opt.wrap = false
 vim.opt.backspace = "start,eol,indent"
 vim.opt.path:append { "**" }
 vim.opt.wildignore:append { "*/node_modules/*" }
+vim.api.nvim_set_var('terminal_emulator', 'kitty')
 
 vim.api.nvim_set_var('mapleader', ' ')
