@@ -1,15 +1,15 @@
 vim.cmd("autocmd!")
 
+-- Encoding
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 
-vim.wo.number = true
-vim.opt.title = true
-vim.opt.autoindent = true
-vim.opt.hlsearch = true
--- For coc.nvim
-vim.opt.backup = false
+vim.wo.number = true      -- Enable numbers
+vim.opt.title = true      -- Show title on window
+vim.opt.autoindent = true -- Enable auto-indent
+vim.opt.hlsearch = true   -- Enable highlighting after search match
+vim.opt.backup = false    -- For coc.nvim
 vim.opt.writebackup = false
 vim.opt.showcmd = true
 vim.opt.cmdheight = 1

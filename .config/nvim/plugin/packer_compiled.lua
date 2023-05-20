@@ -74,6 +74,24 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "/home/wioenena/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
+  ["barbecue.nvim"] = {
+    config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rbarbecue\frequire\0" },
+    load_after = {},
+    loaded = true,
+    needs_bufread = false,
+    path = "/home/wioenena/.local/share/nvim/site/pack/packer/opt/barbecue.nvim",
+    url = "https://github.com/utilyre/barbecue.nvim"
+  },
+  ["ccc.nvim"] = {
+    loaded = true,
+    path = "/home/wioenena/.local/share/nvim/site/pack/packer/start/ccc.nvim",
+    url = "https://github.com/uga-rosa/ccc.nvim"
+  },
   ["cmd-parser.nvim"] = {
     loaded = true,
     path = "/home/wioenena/.local/share/nvim/site/pack/packer/start/cmd-parser.nvim",
@@ -83,6 +101,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/wioenena/.local/share/nvim/site/pack/packer/start/coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
+  },
+  ["dashboard-nvim"] = {
+    loaded = true,
+    path = "/home/wioenena/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
+    url = "https://github.com/nvimdev/dashboard-nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -114,10 +137,25 @@ _G.packer_plugins = {
     path = "/home/wioenena/.local/share/nvim/site/pack/packer/start/nim.nvim",
     url = "https://github.com/alaviss/nim.nvim"
   },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/home/wioenena/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/NvChad/nvim-colorizer.lua"
+  },
+  ["nvim-cursorline"] = {
+    loaded = true,
+    path = "/home/wioenena/.local/share/nvim/site/pack/packer/start/nvim-cursorline",
+    url = "https://github.com/yamatsum/nvim-cursorline"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/wioenena/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-navic"] = {
+    loaded = true,
+    path = "/home/wioenena/.local/share/nvim/site/pack/packer/start/nvim-navic",
+    url = "https://github.com/SmiteshP/nvim-navic"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -149,10 +187,25 @@ _G.packer_plugins = {
     path = "/home/wioenena/.local/share/nvim/site/pack/packer/start/range-highlight.nvim",
     url = "https://github.com/winston0410/range-highlight.nvim"
   },
+  ["telescope-emoji.nvim"] = {
+    loaded = true,
+    path = "/home/wioenena/.local/share/nvim/site/pack/packer/start/telescope-emoji.nvim",
+    url = "https://github.com/xiyaowong/telescope-emoji.nvim"
+  },
+  ["telescope-env.nvim"] = {
+    loaded = true,
+    path = "/home/wioenena/.local/share/nvim/site/pack/packer/start/telescope-env.nvim",
+    url = "https://github.com/LinArcX/telescope-env.nvim"
+  },
   ["telescope-media-files.nvim"] = {
     loaded = true,
     path = "/home/wioenena/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
     url = "https://github.com/nvim-telescope/telescope-media-files.nvim"
+  },
+  ["telescope-node-modules.nvim"] = {
+    loaded = true,
+    path = "/home/wioenena/.local/share/nvim/site/pack/packer/start/telescope-node-modules.nvim",
+    url = "https://github.com/nvim-telescope/telescope-node-modules.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -182,6 +235,15 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-web-devicons ]]
+vim.cmd [[ packadd barbecue.nvim ]]
+
+-- Config for: barbecue.nvim
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rbarbecue\frequire\0", "config", "barbecue.nvim")
+
+time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
