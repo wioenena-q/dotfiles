@@ -4,3 +4,4 @@ end
 
 fish_add_path ~/.local/bin
 fish_add_path ~/.choosenim/toolchains/nim-1.6.12/bin
+fish_add_path ~/.nimble/bin
