@@ -60,5 +60,6 @@ packer.startup(function(use)
         require('barbecue').setup()
       end
     },
+    'm4xshen/autoclose.nvim'
   }
 end)

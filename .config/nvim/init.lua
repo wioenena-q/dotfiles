@@ -20,3 +20,4 @@ end
 
 vim.cmd [[colorscheme tokyonight-night]]
 vim.cmd [[set guicursor=a:blinkon100]]
+vim.cmd [[set nofoldenable]]
