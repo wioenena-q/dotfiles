@@ -17,7 +17,8 @@
 #pulseaudio,
 #cpu,
 #memory,
-#clock {
+#clock,
+#tray {
   margin-top: 10px;
   margin-bottom: 10px;
   color: @secondary;
@@ -55,6 +56,6 @@ window {
 #pulseaudio,
 #cpu,
 #memory,
-#clock {
+#clock, #tray {
   margin-right: 15px;
 }

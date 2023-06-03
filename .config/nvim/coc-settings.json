@@ -41,12 +41,24 @@
     },
     "rust": {
       "command": "~/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rust-analyzer",
-      "filetypes": ["rust"],
-      "rootPatterns": ["Cargo.toml"]
+      "filetypes": [
+        "rust"
+      ],
+      "rootPatterns": [
+        "Cargo.toml"
+      ]
     },
     "zig": {
       "command": "zls",
-      "filetypes": ["zig"]
+      "filetypes": [
+        "zig"
+      ]
+    },
+    "nim": {
+      "command": "nimlsp",
+      "filetypes": [
+        "nim"
+      ]
     }
   }
 }
