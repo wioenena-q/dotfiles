@@ -8,6 +8,8 @@
   border-radius: 0;
   min-height: 0px;
   font-size: 16px;
+  box-shadow: none;
+  text-shadow: none;
 }
 
 .desktop-name,
@@ -25,7 +27,7 @@
 }
 
 window {
-  background: @window-background;
+  background: transparent;
 }
 
 .desktop-name {

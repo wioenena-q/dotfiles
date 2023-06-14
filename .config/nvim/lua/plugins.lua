@@ -29,12 +29,14 @@ packer.startup(function(use)
     'nvim-telescope/telescope-node-modules.nvim',
     'xiyaowong/telescope-emoji.nvim',
     'LinArcX/telescope-env.nvim',
+    'm4xshen/autoclose.nvim',
 
     -- Themes etc.
     "marko-cerovac/material.nvim",
-    'nvimdev/dashboard-nvim',
     'xiyaowong/transparent.nvim',
     "folke/tokyonight.nvim",
+    'nordtheme/vim',
+    'nvimdev/dashboard-nvim',
     'yamatsum/nvim-cursorline',
 
     -- For programming languages
@@ -59,7 +61,6 @@ packer.startup(function(use)
       config = function()
         require('barbecue').setup()
       end
-    },
-    'm4xshen/autoclose.nvim'
+    }
   }
 end)

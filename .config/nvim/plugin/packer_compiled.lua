@@ -227,6 +227,11 @@ _G.packer_plugins = {
     path = "/home/wioenena/.local/share/nvim/site/pack/packer/start/transparent.nvim",
     url = "https://github.com/xiyaowong/transparent.nvim"
   },
+  vim = {
+    loaded = true,
+    path = "/home/wioenena/.local/share/nvim/site/pack/packer/start/vim",
+    url = "https://github.com/nordtheme/vim"
+  },
   ["vim-devicons"] = {
     loaded = true,
     path = "/home/wioenena/.local/share/nvim/site/pack/packer/start/vim-devicons",
