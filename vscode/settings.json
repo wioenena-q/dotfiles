@@ -1,0 +1,62 @@
+{
+  // General
+  "window.titleBarStyle": "custom",
+  "editor.inlineSuggest.enabled": true,
+  "editor.fontSize": 14,
+  "editor.fontFamily": "'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontWeight": 500,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorStyle": "block",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.guides.bracketPairs": true,
+  "editor.formatOnSave": true,
+  "editor.inlayHints.fontSize": 12,
+  "editor.inlayHints.padding": true,
+  "terminal.integrated.fontFamily": "'MesloLGS NF'",
+  "terminal.integrated.defaultProfile.linux": "fish",
+  // Javascript
+  "javascript.referencesCodeLens.showOnAllFunctions": true,
+  // Typescript
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.referencesCodeLens.showOnAllFunctions": true,
+  // Deno
+  "deno.inlayHints.parameterNames.suppressWhenArgumentMatchesName": false,
+  "deno.codeLens.implementations": true,
+  "deno.codeLens.references": true,
+  "deno.codeLens.referencesAllFunctions": true,
+  "deno.suggest.completeFunctionCalls": true,
+  // C/Cpp
+  "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
+  "C_Cpp.inlayHints.parameterNames.enabled": true,
+  "C_Cpp.inlayHints.referenceOperator.enabled": true,
+  // Go
+  "go.inlayHints.assignVariableTypes": true,
+  "go.inlayHints.compositeLiteralFields": true,
+  "go.inlayHints.compositeLiteralTypes": true,
+  "go.inlayHints.constantValues": true,
+  "go.inlayHints.functionTypeParameters": true,
+  "go.inlayHints.parameterNames": true,
+  "go.inlayHints.rangeVariableTypes": true,
+  // Python
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.pytestParameters": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  // Rust
+  "rust-analyzer.inlayHints.bindingModeHints.enable": true,
+  "rust-analyzer.inlayHints.expressionAdjustmentHints.hideOutsideUnsafe": true,
+  // Zig
+  "zig.zls.path": "/home/wioenena/.config/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
+  // Themes
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.colorTheme": "Nord",
+  "workbench.iconTheme": "symbols",
+  "symbols.hidesExplorerArrows": false,
+  "vscode_custom_css.imports": [
+    "file:///home/wioenena/.vscode/extensions/brandonkirbyson.vscode-animations-1.0.10/dist/updateHandler.js"
+  ],
+  "animations.Enabled": true
+}
