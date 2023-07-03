@@ -43,7 +43,7 @@ window {
   background: @primary;
   padding: 5px 10px;
   transition: all .3s ease-in-out;
-  border-radius: 4px;
+  border-radius: 45px;
   color: @text-primary;
 }
 

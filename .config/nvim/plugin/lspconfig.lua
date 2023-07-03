@@ -13,7 +13,6 @@ lspconfig.jsonls.setup {}
 lspconfig.lua_ls.setup {}
 lspconfig.rust_analyzer.setup {}
 lspconfig.tsserver.setup {
-  single_file_support = false,
   root_dir = lspconfig.util.root_pattern("package.json")
 }
 

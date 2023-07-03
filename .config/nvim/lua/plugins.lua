@@ -36,6 +36,7 @@ packer.startup(function(use)
     'xiyaowong/transparent.nvim',
     "folke/tokyonight.nvim",
     'nordtheme/vim',
+    'catppuccin/nvim',
     'nvimdev/dashboard-nvim',
     'yamatsum/nvim-cursorline',
 

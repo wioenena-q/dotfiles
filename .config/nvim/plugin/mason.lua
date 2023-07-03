@@ -26,7 +26,8 @@ lspconfig.setup {
     'lua_ls',
     'pyright',
     'rust_analyzer',
-    'zls'
+    'zls',
+    "csharp_ls"
   },
   automatic_installation = true
 }

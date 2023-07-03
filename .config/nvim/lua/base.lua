@@ -30,5 +30,8 @@ vim.opt.backspace = "start,eol,indent"
 vim.opt.path:append { "**" }
 vim.opt.wildignore:append { "*/node_modules/*" }
 vim.api.nvim_set_var('terminal_emulator', 'kitty')
+vim.opt.relativenumber = true
+vim.opt.guicursor = "a:blinkon100"
+vim.opt.foldenable = false
 
 vim.api.nvim_set_var('mapleader', ' ')

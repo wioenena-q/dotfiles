@@ -9,7 +9,7 @@ telescope.setup {
   }
 }
 
--- Media files extensions
+-- Extensions
 telescope.load_extension 'media_files'
 telescope.load_extension 'node_modules'
 telescope.load_extension 'emoji'

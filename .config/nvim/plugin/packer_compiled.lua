@@ -142,6 +142,11 @@ _G.packer_plugins = {
     path = "/home/wioenena/.local/share/nvim/site/pack/packer/start/nim.nvim",
     url = "https://github.com/alaviss/nim.nvim"
   },
+  nvim = {
+    loaded = true,
+    path = "/home/wioenena/.local/share/nvim/site/pack/packer/start/nvim",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/home/wioenena/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",

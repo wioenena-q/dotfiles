@@ -18,6 +18,4 @@ if is_win then
   -- Windows
 end
 
-vim.cmd [[colorscheme nord]]
-vim.cmd [[set guicursor=a:blinkon100]]
-vim.cmd [[set nofoldenable]]
+vim.cmd [[colorscheme catppuccin-mocha]]

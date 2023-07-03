@@ -4,7 +4,7 @@
   "height": "auto",
   "spacing": 4,
   "modules-left": ["custom/desktop_name", "wlr/workspaces"],
-  "modules-center": ["hyprland/window"],
+  "modules-center": ["network"],
   "modules-right": ["tray", "pulseaudio", "cpu", "memory", "clock"],
   "custom/desktop_name": {
     "format": "{}",
